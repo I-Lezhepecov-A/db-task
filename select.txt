@@ -1,0 +1,1 @@
+LoanApplication.objects.select_related('contract').get(contract__id=3).items.select_related('manufacturer').values_list('manufacturer__pk', flat=True).distinct()
